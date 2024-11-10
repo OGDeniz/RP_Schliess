@@ -1,6 +1,29 @@
-$danger: #49dc35;
-$success: #eb00a4;
+$danger: #2a5cfe;
+$success: #08eb00a4;
 
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.alert-danger {
+    background-color: $danger;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: $success;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
