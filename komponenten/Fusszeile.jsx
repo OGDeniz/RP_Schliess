@@ -4,8 +4,7 @@ export default function Fusszeile() {
       <div>
         <h2>
             Fusszeile
-        </h2>
-        
+        </h2>        
       </div>
     );
   }

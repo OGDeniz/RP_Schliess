@@ -1,9 +1,9 @@
 import Navigation from "@/komponenten/Navigation";
-import FussZeile from "@/komponenten/FussZeile";
+import Fusszeile from "@/komponenten/FussZeile";
 import Head from "next/head";
 
 
-export default function Layout({ children }) {
+export default function Layout({children} ) {
   return (
     <div>
       <Head>
@@ -12,8 +12,10 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      {children}
-      <FussZeile />
+
+          {children}
+
+      <Fusszeile/>
     </div>
   );
 }
