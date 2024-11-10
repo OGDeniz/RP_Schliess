@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Badge from 'react-bootstrap/Badge';
+import { Button, Card, CardText } from 'react-bootstrap';
 
 export default function Navigation() {
     return (
@@ -14,20 +15,31 @@ export default function Navigation() {
                         </a>
                     </Link>
                 </div>
+                <CardText>
+                    
+              Ihr Schlüsselnotdienst | Rufen Sie uns an ! | Wir sind für sie da!
+              
+                </CardText >
                 <div className='d-flex justify-content-between align-content-center'>
                     <Link href='/produkte' passHref legacyBehavior>
                         <a>
-                            <h6>Produkte</h6>
+                            <Button className='bg-danger text-white m-1'>
+                            <h6 className='text-bg-danger m-1'>Produkte</h6>
+                            </Button>
                         </a>
                     </Link>
                     <Link href='/ueber-uns' passHref legacyBehavior>
                         <a>
-                            <h6>Über uns</h6>
+                            <Button className='bg-danger text-white m-1'>
+                            <h6 className='text-bg-danger m-1'>Über uns</h6>
+                            </Button>
                         </a>
                     </Link>
                     <Link href='/kontakt' passHref legacyBehavior>
                         <a>
-                            <h6>Kontakt</h6>
+                            <Button className='bg-danger text-white m-1'>
+                            <h6 className='text-bg-danger m-1'>Kontakt</h6>
+                            </Button>
                         </a>
                     </Link>
                 </div>

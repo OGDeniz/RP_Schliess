@@ -12,7 +12,7 @@ export default function Home() {
    { src: '/bilder/img4.png', width: 800, height: 600 },
     { src: '/bilder/img5.png', width: 800, height: 600 },
  ]} />
-      <h1>Essen</h1>
+      <h1 className="text-center">24 Std. Für Sie erreichbar!!!</h1>
     </div>
   )
 }
