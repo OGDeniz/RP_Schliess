@@ -9,7 +9,7 @@ export default function Layout({children} ) {
     <div>
       
       <Head>
-        <title>Liefermax - Dein Lieferservice</title>
+        <title>RP Schliesstechnik</title>
         <meta name="description" content="Liefermax" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

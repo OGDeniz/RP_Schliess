@@ -1,6 +1,6 @@
 import Slider from "@/komponenten/Slider";
 
-
+import Produktliste from "@/komponenten/Produktliste";
 
 export default function Home() {
   return (
@@ -11,8 +11,10 @@ export default function Home() {
    { src: '/bilder/img3.png', width: 800, height: 600 },
    { src: '/bilder/img4.png', width: 800, height: 600 },
     { src: '/bilder/img5.png', width: 800, height: 600 },
- ]} />
-      <h1 className="text-center">24 Std. Für Sie erreichbar!!!</h1>
+ ]} >
+      </Slider>
+      <h1 className="text-center text-danger">24 Std. Für Sie erreichbar!!!</h1>
+      <Produktliste />
     </div>
   )
 }
