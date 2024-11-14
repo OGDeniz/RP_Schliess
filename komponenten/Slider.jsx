@@ -9,7 +9,7 @@ const Slider = ({ images }) => {
         <Carousel className="slider bg-dark shadow">
             {images.map((image, index) => (
                 <Carousel.Item key={index}>
-                    <Image src={image} alt={`Slide ${index}`} className="d-block w-100 rounded-3 slider-image " width={256} height={540} />
+                    <Image src={image} alt={`Slide ${index}`} className="d-block w-100 rounded-3 slider-image " width={1080} height={640} />
                 </Carousel.Item>
             ))}
         </Carousel>
