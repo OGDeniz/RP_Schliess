@@ -1,7 +1,19 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
-  }
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/layout/*": ["components/navigation/*"],
+      "@/ui/*": ["./components/ui/*"],
+      "@/features/*": ["./components/features/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/public/*": ["./public/*"]
+    },
+    "jsx": "preserve",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"]
 }

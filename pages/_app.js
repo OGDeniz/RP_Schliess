@@ -1,19 +1,14 @@
+import "@/styles/global.module.css";
+import "styles/main.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "@/components/Layout";
 
-
-import "@/styles/globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Layout from "@/komponenten/Layout";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/custom.scss';
-
-
- function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  )
+  );
 }
 
-export default App; 
-
+export default App;
