@@ -1,22 +1,36 @@
-import hash from 'bcryptjs';
-import Rechnungs from '../checkout/rechnung'
+import { hash } from 'bcryptjs';
+import { connectToDatabase } from '../../utils/mongoDb';
 
-
-// die Funktion
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        const { password } = req.body;
+        const { username, password } = req.body;
 
-        // Hash the password
-        const hashedPassword = await hash(password, 10);
+        if (!username || !password) {
+            return res.status(400).json({ message: 'Benutzername und Passwort sind erforderlich' });
+        }
 
-        // You can now use the hashed password, e.g., save it to a database
-        // For demonstration, we just return it in the response
-        res.status(200).json({ message: "API funktioniert korrekt!", hashedPassword });
+        try {
+            const { db } = await connectToDatabase();
 
-        Rechnungs();
+            const existingUser = await db.collection('users').findOne({ username });
+            if (existingUser) {
+                return res.status(409).json({ message: 'Benutzername bereits vergeben' });
+            }
 
+            const hashedPassword = await hash(password, 10);
+
+            await db.collection('users').insertOne({
+                username,
+                password: hashedPassword,
+                createdAt: new Date(),
+            });
+
+            return res.status(201).json({ message: 'Benutzer erfolgreich registriert' });
+        } catch (error) {
+            console.error('Fehler bei der Registrierung:', error);
+            return res.status(500).json({ message: 'Interner Serverfehler' });
+        }
     } else {
-        res.status(200).json({ message: "API funktioniert korrekt!" });
+        res.status(405).json({ message: 'Methode nicht erlaubt' });
     }
 }
