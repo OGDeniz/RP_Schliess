@@ -1,0 +1,16 @@
+.container {
+  max-width: 1200px;
+  margin: .5rem auto;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Flexiblere Höhe der oberen und unteren Zeilen */
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  padding: 40px;  /* Reduziertes Padding, um mehr Platz zu lassen */
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+}
+

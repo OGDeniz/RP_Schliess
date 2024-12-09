@@ -1,0 +1,71 @@
+/* styles/slider.module.css */
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 400px; /* Setze die Höhe des linken Abschnitts auf 400px */
+}
+
+.mainSlider {
+    width: 100%;
+    height: 100%; /* Setze die Höhe des Sliders auf 100% des linken Abschnitts */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sliderContainer {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.sliderWrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider {
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+}
+
+.sliderImage {
+    object-fit: fill;
+    object-position: center;
+    border-radius: 0.5rem;
+    aspect-ratio: 16/9;
+}
