@@ -3,11 +3,13 @@ import Slider from "@/components/ui/Slider";
 import styles from "styles/navigation.module.css";
 import homeStyles from "@/styles/home.module.css"; // Neues CSS Modul für die Startseite
 
-
+// Die Startseite wird in der Datei pages/index.js definiert.
 export default function Home() {
+
+  // Die Bilder für den Slider und die Kundenbewertungen werden in Arrays definiert. 
   const sliderImages = [
     {
-      url: "/bilder/img1.png",
+      url: "/bilder/img1.jpg",
       alt: "Schlüsseldienst Bild 1"
     },
     {
@@ -26,7 +28,8 @@ export default function Home() {
       url: "/bilder/img5.png",
       alt: "Schlüsseldienst Bild 5"
     }
-  ];
+  ];                                
+  
 
   const reviews = [
     {
@@ -34,8 +37,16 @@ export default function Home() {
       author: "Max Mustermann",
       rating: 5,
       date: "15.03.2024"
+    },
+    {
+      text: "Top Service, kann ich nur weiterempfehlen!",
+      author: "Erika Musterfrau",
+      rating: 5,
+      date: "22.02.2024"
     }
   ];
+
+  // Die Startseite besteht aus zwei Abschnitten: dem linken Abschnitt mit dem Slider und dem rechten Abschnitt mit Informationen über das Unternehmen und Kundenbewertungen.
    return (
     <div className={homeStyles.container}>
       <div className={homeStyles.leftSection}>
@@ -66,6 +77,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
+
 
         <div className={homeStyles.reviewsSection}>
           <h3>Das sagen unsere Kunden</h3>

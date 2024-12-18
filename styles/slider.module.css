@@ -1,7 +1,7 @@
 /* styles/slider.module.css */
 .container {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     padding: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -23,14 +23,15 @@
 }
 
 .rightSection {
-    flex: 1;
+    flex: 1;  
+    height: auto; /* Setze die Höhe des rechten Abschnitts auf auto  so dass er sich an den Inhalt anpasst */       
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
 .sliderContainer {
-    position: relative;
+    position: relative; 
     margin: auto;
     overflow: hidden;
 }

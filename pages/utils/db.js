@@ -4,7 +4,7 @@ const pool = mariadb.createPool({
     host: 'db5016811760.hosting-data.io',       // MariaDB-Host
     user: 'dbu1330002',            // Benutzername
     password: 'Chakalakachakalaka1312.',// Passwort
-    database: 'user_management',
+    database: 'dbs13584230',
     connectionLimit: 5,
 });
 

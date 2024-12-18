@@ -1,3 +1,9 @@
+/*
+    In diesem Modul definieren wir die Styles für das Modal. Das Modal wird in der Datei components/Modal.js verwendet. 
+    Modal bezeichnet ein Fenster, das über dem eigentlichen Inhalt der Webseite erscheint. In unserem Fall wird das Modal verwendet, 
+    um die Details eines Produkts anzuzeigen und dem Benutzer die Möglichkeit zu geben, das Produkt zu kaufen. Das Modal wird angezeigt, wenn der Benutzer auf ein Produkt klickt. 
+*/
+
 /* styles/modal.module.css */
 .modalContent {
     padding: 2rem;

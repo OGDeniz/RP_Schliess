@@ -1,5 +1,5 @@
-import { hash } from 'bcryptjs';
-import { connectToDatabase } from '../../utils/mongoDb';
+  import { hash } from 'bcryptjs';
+
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {

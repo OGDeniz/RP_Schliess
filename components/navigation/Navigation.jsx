@@ -9,7 +9,7 @@ export default function Navigation() {
             <div className={styles.navContainer}>
                 <div className={styles.leftNav}>
                     <Link href='/'>
-                        <Image src='/bilder/img5.png' alt='logo' width={150} height={100} />
+                        <Image src='/bilder/img5.png' alt='logo' width={300} height={200} />
                     </Link>
                 </div>
                 

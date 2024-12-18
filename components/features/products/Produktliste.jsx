@@ -92,31 +92,11 @@ export default function Produktliste() {
                             className={`${modalStyles.paymentButton} ${modalStyles.paypal}`}
                             onClick={() => handlePaymentSelection('paypal')}
                             >
-                            <img
+                            <Image
                                 src="/svg/paypal.svg"
                                 alt="PayPal Express Checkout"
-                                className={modalStyles.paymentIcon}
-                            />
-                            </button>
-
-                            <button
-                            className={`${modalStyles.paymentButton} ${modalStyles.sofort}`}
-                            onClick={() => handlePaymentSelection('sofort')}
-                            >
-                            <img
-                                src="/svg/sofort.svg"
-                                alt="Mit Sofort bezahlen"
-                                className={modalStyles.paymentIcon}
-                            />
-                            </button>
-
-                            <button
-                            className={`${modalStyles.paymentButton} ${modalStyles.rechnung}`}
-                            onClick={() => handlePaymentSelection('rechnung')}
-                            >
-                            <img
-                                src="/svg/rechnung.svg"
-                                alt="Auf Rechnung"
+                                width={50}
+                                height={50}
                                 className={modalStyles.paymentIcon}
                             />
                             </button>
