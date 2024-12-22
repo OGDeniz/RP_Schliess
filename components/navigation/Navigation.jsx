@@ -27,13 +27,13 @@ export default function Navigation() {
                 </div>
                 
                 <div className={styles.rightNav}>
-                    <Link className={`${styles.link} ${styles.btn}`} href="/produkte">
-                        Zur Auswahl
+                    <Link className={`${styles.link} ${styles.btn} `} href="/produkte">
+                        Dienstleistungen
                     </Link>
-                    
+{/*                     
                     <Link className={`${styles.link} ${styles.btn}`} href="/api/">
                         Registrieren
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </nav>
