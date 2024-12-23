@@ -10,12 +10,13 @@
   },
   "dependencies": {
     "@paypal/react-paypal-js": "^8.7.0",
+    "@radix-ui/react-slot": "^1.1.1",
     "@stripe/react-stripe-js": "^3.0.0",
     "@stripe/stripe-js": "^5.2.0",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.2",
-
+    "class-variance-authority": "^0.7.1",
     "next": "^15.0.4-canary.14",
     "next.js": "^1.0.3",
     "prop-types": "^15.8.1",

@@ -37,7 +37,7 @@ export default function Rechnung() {
                 
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
-                        <Form.Label column={ }>Vorname*</Form.Label>
+                        <Form.Label >Vorname*</Form.Label>
                         <Form.Control
                             type="text"
                             name="vorname"

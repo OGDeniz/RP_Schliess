@@ -100,6 +100,31 @@ export default function Produktliste() {
                                 className={modalStyles.paymentIcon}
                             />
                             </button>
+                            <button
+                            className={`${modalStyles.paymentButton} ${modalStyles.sofort}`}
+                            onClick={() => handlePaymentSelection('sofort')}
+                            >
+                            <Image
+                                src="/svg/sofort.svg"
+                                alt="Sofort Überweisung"
+                                width={50}
+                                height={50}
+                                className={modalStyles.paymentIcon}
+                            />
+                            </button>
+                            <button
+                            className={`${modalStyles.paymentButton} ${modalStyles.rechnung}`}
+                            onClick={() => handlePaymentSelection('rechnung')}
+                            >
+                            <Image
+                                src="/svg/rechnung.svg"
+                                alt="Rechnung"
+                                width={50}
+                                height={50}
+                                className={modalStyles.paymentIcon}
+                            />
+                            </button>
+                            
                         </div>
                     </div>
                 </div>

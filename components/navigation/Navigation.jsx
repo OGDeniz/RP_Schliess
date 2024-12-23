@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/navigation.module.css'; 
+import TexSlider from '../ui/TextSlider';
 
 export default function Navigation() {
     return (
@@ -9,7 +10,7 @@ export default function Navigation() {
             <div className={styles.navContainer}>
                 <div className={styles.leftNav}>
                     <Link href='/'>
-                        <Image src='/bilder/img5.png' alt='logo' width={300} height={200} />
+                        <Image src='/bilder/img5.png' alt='logo' width={150} height={100} />
                     </Link>
                 </div>
                 
@@ -18,22 +19,17 @@ export default function Navigation() {
                         <h1>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar!</h1>
                     </div>
                     <div className={styles.middleBottom}>
-                        <h5>
-                            Ob Tür zugefallen, Schlüssel verloren oder Schloss defekt – 
-                            wir kümmern uns darum.<br />
-                            Kontaktieren Sie uns, wir sind rund um die Uhr für Sie da!
-                        </h5>
-                    </div>
+<TexSlider/>                    </div>
                 </div>
                 
                 <div className={styles.rightNav}>
-                    <Link className={`${styles.link} ${styles.btn} `} href="/produkte">
-                        Dienstleistungen
+                    <Link className={`${styles.link} ${styles.btn}`} href="/produkte">
+                        Service
                     </Link>
-{/*                     
+                    
                     <Link className={`${styles.link} ${styles.btn}`} href="/api/">
                         Registrieren
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
         </nav>
