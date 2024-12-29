@@ -10,7 +10,7 @@ export default function Navigation() {
             <div className={styles.navContainer}>
                 <div className={styles.leftNav}>
                     <Link href='/'>
-                        <Image src='/bilder/img5.png' alt='logo' width={150} height={100} />
+                        <Image src='/bilder/img5.png' alt='RP-Schließtechnik' width={150} height={100} />
                     </Link>
                 </div>
                 
@@ -19,7 +19,11 @@ export default function Navigation() {
                         <h1>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar!</h1>
                     </div>
                     <div className={styles.middleBottom}>
-<TexSlider/>                    </div>
+                    
+
+                    <TexSlider/>                    
+                                
+                    </div>
                 </div>
                 
                 <div className={styles.rightNav}>

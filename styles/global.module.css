@@ -1,6 +1,8 @@
 .container {
-  max-width: 1200px;
-  margin: .5rem auto;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .page {
@@ -14,3 +16,11 @@
   font-family: var(--font-geist-sans);
 }
 
+.footer {
+  width: 100%;
+  display: flex; /* Flexbox zur Ausrichtung */
+  justify-content: center; /* Inhalte zentrieren */
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--light);
+}

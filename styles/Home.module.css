@@ -1,17 +1,27 @@
+
+/* home.module.css */
 .container {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex;              /* Horizontale Anordnung der Spalten */
+    gap: 2rem;                  /* Abstand zwischen Spalten */
+    padding: 2rem;              /* Innenabstand des Containers */
+    max-width: 1200px;          /* Einheitliche Breite für den Container */
+    margin: 0 auto;             /* Zentrierung des Containers */
+    align-items: stretch;       /* Spalten gleich hoch machen */
 }
 
 .leftSection {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 325px;
+    display: flex;              /* Elemente in Spalte horizontal anordnen */
+    flex-direction: column;     /* Elemente in Spalte vertikal anordnen */
+    gap: 2rem;                  /* Abstand zwischen Elementen */
+
+}
+
+.rightSection {
+    display: flex;              /* Elemente in Spalte horizontal anordnen */
+    flex-direction: column;     /* Elemente in Spalte vertikal anordnen */
+    justify-content: space-between; /* Platz zwischen Elementen verteilen */
+    gap: 1rem;                  /* Abstand zwischen Elementen */
 }
 
 .sliderContainer {
@@ -20,22 +30,19 @@
 
 .mainSlider {
     width: 100%;
+    height: 100%; /* Fülle die gesamte Höhe der Spalte aus */
+    aspect-ratio: auto; /* Verhindere eine Verzerrung */
     border-radius: 8px;
     overflow: hidden;
 }
-.rightSection {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
+
 
 .aboutUs {
     background: var(--secondary);
     padding: 2rem;
     border-radius: 8px;
     color: var(--light);
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 }
 
 .aboutUs h2 {
@@ -59,52 +66,25 @@
 }
 
 .companyInfo li:before {
-    content: "✓";
+    content: "\2713";
     position: absolute;
     left: 0;
     color: var(--success);
-}
-
-.reviewsSection {
-    background: var(--light);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.reviewSlider {
-    margin-top: 1rem;
-    overflow: hidden;
-}
-
-.review {
-    padding: 1rem;
-    background: white;
-    border-radius: 4px;
-    margin: 0.5rem 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.stars {
-    color: gold;
-    margin-bottom: 0.5rem;
-}
-
-.reviewFooter {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
 }
 
 @media (max-width: 968px) {
     .container {
         flex-direction: column;
     }
-    
+
     .leftSection,
     .rightSection {
-        width: 100%;
+        flex: 1;
+        width: 50%;
     }
+}
+
+/* Additional Style Tweaks */
+.aboutUs:hover {
+    box-shadow: 0 0 12px var(--secondary-dark);
 }
