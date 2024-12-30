@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/navigation.module.css'; 
@@ -7,6 +8,11 @@ import TexSlider from '../ui/TextSlider';
 import HotButton from '../ui/HotButton';
 
 export default function Navigation() {
+        const [menuOpen, setMenuOpen] = useState(false);
+
+
+        const toggleMenu = () => setMenuOpen(!menuOpen);
+        
     return (
         <nav className={styles.navigation}>
             <div className={styles.navContainer}>
@@ -44,13 +50,19 @@ export default function Navigation() {
                         Service
                     </Link>
                     
-                    <Link className={`${styles.link} ${styles.btn}`} href="/api/">
+                    {/* <Link className={`${styles.link} ${styles.btn}`} href="/api/">
                         Registrieren
-                    </Link>
+                    </Link> */}
 
                     <Link className={`${styles.link} ${styles.btn}`} href="/contact">
                         Kontakt
                     </Link>
+
+                    <div className='burgerMenu' onClick={toggleMenu}>
+                    <span className={styles.burger}></span>
+                    <span className={styles.burger}></span>
+                    <span className={styles.burger}></span>
+                    </div>
 
 
                 </div>
