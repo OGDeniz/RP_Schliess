@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/navigation.module.css'; 
-import '@/styles/TextSlider.module.css';   
+import '@/styles/textSlider.module.css';   
 import TexSlider from '../ui/TextSlider';
 import HotButton from '../ui/HotButton';
 

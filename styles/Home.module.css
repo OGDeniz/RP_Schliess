@@ -5,7 +5,7 @@
     display: flex;              /* Horizontale Anordnung der Spalten */
     gap: 2rem;                  /* Abstand zwischen Spalten */
     padding: 2rem;              /* Innenabstand des Containers */
-    max-width: 1200px;          /* Einheitliche Breite für den Container */
+    max-width: 1920;          /* Einheitliche Breite für den Container */
     margin: 0 auto;             /* Zentrierung des Containers */
     align-items: stretch;       /* Spalten gleich hoch machen */
 }

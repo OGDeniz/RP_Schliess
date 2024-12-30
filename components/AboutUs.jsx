@@ -1,4 +1,4 @@
-import styles from '../styles/AboutUs.module.css';
+import styles from '../styles/aboutus.module.css';
 
 import Slider from "@/components/ui/Slider";
 import { SliderData } from '@/components/jsonDb/slidesData';

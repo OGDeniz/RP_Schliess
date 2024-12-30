@@ -1,19 +1,26 @@
-import { useState } from 'react';
-import axios from 'axios';
-import db from '../pages/utils/db';
+import { useState } from 'react'; // React und useState importieren
+import axios from 'axios'; // Für die API-Anfrage
 
 export default function Register() {
+    // State-Variablen für die Eingaben und Nachrichten
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
     const [message, setMessage] = useState('');
 
+    // Funktion, die das Formular verarbeitet
     const handleRegister = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Verhindert das automatische Neuladen der Seite
+
+        // Überprüfen, ob alle Felder ausgefüllt sind
+        if (!username || !password || !name || !address) {
+            setMessage('Alle Felder müssen ausgefüllt werden.');
+            return;
+        }
 
         try {
-            // Anfrage an die API senden
+            // Daten an die API senden
             const response = await axios.post('/api/register', {
                 username,
                 password,
@@ -29,6 +36,7 @@ export default function Register() {
         }
     };
 
+    // Rückgabe (HTML für das Formular)
     return (
         <div>
             <h1>Registrierung</h1>

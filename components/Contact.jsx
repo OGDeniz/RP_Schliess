@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import homestyles from '@/styles/Home.module.css';
+import homestyles from '@/styles/home.module.css';
 import Image from 'next/image';
 
 const ContactUs = () => {

@@ -7,6 +7,21 @@
     align-items: center; /* Vertikal zentrieren */
     padding: 1rem;
     background-color: var(--primary);
+    background-image: url('../public/bilder/brusl.jpg');
+    background-size: cover;
+    background-position : inherit;
+}
+
+.navigation h2 {
+    display: block;
+    text-align: center;
+    color: var(--light);
+}
+
+.navigation p {
+    color: var(--light);
+    background-color: black, 0.5, 0.5;
+    text-decoration: none;
 }
 
 
@@ -14,10 +29,24 @@
 .navContainer {
     display: flex;
     flex-direction: row;
+
+}
+
+.leftNav, .middleNav, .rightNav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.leftNav {
+    display: block;
 }
 
 .leftNav img {
     margin-right: 10px;         /* Abstand zwischen Logo und Text */
+    width: 200px;
+    height: auto;
 }
 
 .middleNav {
@@ -39,9 +68,10 @@
     flex-direction: column;
     justify-content: space-around;
     margin-left: 100px;
+    margin-right: 10px;
     align-items: flex-start;
     padding: 10px;
-    gap: .3rem;
+    gap: 1rem;
     
 }
 
@@ -78,6 +108,11 @@
     align-items: center;
     padding: 1rem;
     background: none;
+}
+
+.slide:active{
+    background-color: black;
+
 }
 
 

@@ -13,6 +13,7 @@ export default function Checkout() {
         hausnummer: '',
         plz: '',
         ort: '',
+        bestellung: '',
     });
 
     const handleChange = (e) => {
@@ -21,13 +22,28 @@ export default function Checkout() {
             [e.target.name]: e.target.value
         });
     };
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Hier später: Bestellung absenden
-        console.log('Bestellung auf Rechnung:', formData);
+    
+        try {
+            const response = await fetch('/api/sendInvoice', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+    
+            if (response.ok) {
+                alert('Die Rechnung wurde erfolgreich gesendet!');
+            } else {
+                alert('Fehler beim Versenden der Rechnung.');
+            }
+        } catch (error) {
+            console.error('Fehler:', error);
+            alert('Ein unerwarteter Fehler ist aufgetreten.');
+        }
     };
-
     return (
         <div className={styles.checkoutContainer}>
             <h1 class="text-center mb-4">Bestellung abschließen</h1>
@@ -37,6 +53,7 @@ export default function Checkout() {
                 
                 <div className={styles.formRow}>
                     <Form.Group className={styles.formGroup}>
+
                         <Form.Label>Vorname*</Form.Label>
                         <Form.Control
                             type="text"
@@ -125,6 +142,21 @@ export default function Checkout() {
                             type="text"
                             name="ort"
                             value={formData.ort}
+                            onChange={handleChange}
+                            required
+                        />
+                    </Form.Group>
+                </div>
+            
+                <h2>Bestellung</h2>
+                <div className={styles.formRow}>
+                    <Form.Group className={styles.formGroup}>
+
+                        <Form.Label>Kurze Beschreibung:</Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            name="bestellung"
+                            value={formData.bestellung}
                             onChange={handleChange}
                             required
                         />
