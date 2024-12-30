@@ -2,7 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/navigation.module.css'; 
+import '@/styles/TextSlider.module.css';   
 import TexSlider from '../ui/TextSlider';
+import HotButton from '../ui/HotButton';
 
 export default function Navigation() {
     return (
@@ -16,15 +18,22 @@ export default function Navigation() {
                 
                 <div className={styles.middleNav}>
                     <div className={styles.middleTop}>
-                        <h1>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar!</h1>
+                            <h1>Ihr Schlüsselnotdienst | Schnell und jederzeit erreichbar!</h1>
                     </div>
                     <div className={styles.middleBottom}>
                     
 
-                    <TexSlider/>                    
-                                
+                        <div className={styles.TexSlider}>
+                            <TexSlider/>
+                            
+                        </div>
+                        <div className={styles.hotButton}>
+                        <HotButton/>
+                        </div>               
+
                     </div>
                 </div>
+                
                 
                 <div className={styles.rightNav}>
                     <Link className={`${styles.link} ${styles.btn}`} href="/aboutus">

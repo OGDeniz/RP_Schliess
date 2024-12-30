@@ -71,6 +71,17 @@
 }
 
 
+.middleBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: none;
+}
+
+
+
 @media (max-width: 768px) {
     .navigation {
         flex-direction: column;
