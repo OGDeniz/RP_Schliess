@@ -27,6 +27,10 @@ export default function Navigation() {
                 </div>
                 
                 <div className={styles.rightNav}>
+                    <Link className={`${styles.link} ${styles.btn}`} href="/aboutus">
+                        Über uns
+                    </Link>
+
                     <Link className={`${styles.link} ${styles.btn}`} href="/produkte">
                         Service
                     </Link>
@@ -34,6 +38,12 @@ export default function Navigation() {
                     <Link className={`${styles.link} ${styles.btn}`} href="/api/">
                         Registrieren
                     </Link>
+
+                    <Link className={`${styles.link} ${styles.btn}`} href="/contact">
+                        Kontakt
+                    </Link>
+
+
                 </div>
             </div>
         </nav>

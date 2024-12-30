@@ -19,6 +19,7 @@
     "class-variance-authority": "^0.7.1",
     "next": "^15.0.4-canary.14",
     "next.js": "^1.0.3",
+    "nodemailer": "^6.9.16",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.9.1",

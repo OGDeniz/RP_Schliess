@@ -1,20 +1,31 @@
 
 /* home.module.css */
 
-
-.leftSection {
-    flex: 1;
-    display: flex;              /* Elemente in Spalte horizontal anordnen */
-    flex-direction: column;     /* Elemente in Spalte vertikal anordnen */
-    gap: 2rem;                  /* Abstand zwischen Elementen */
-
+.container {
+    display: flex;              /* Horizontale Anordnung der Spalten */
+    gap: 2rem;                  /* Abstand zwischen Spalten */
+    padding: 2rem;              /* Innenabstand des Containers */
+    max-width: 1200px;          /* Einheitliche Breite für den Container */
+    margin: 0 auto;             /* Zentrierung des Containers */
+    align-items: stretch;       /* Spalten gleich hoch machen */
 }
-
+.leftSection, .rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Inhalte gleichmäßig verteilen */
+}
+.leftSection {
+    gap: 2rem;
+}
 .rightSection {
-    display: flex;              /* Elemente in Spalte horizontal anordnen */
-    flex-direction: column;     /* Elemente in Spalte vertikal anordnen */
-    justify-content: space-between; /* Platz zwischen Elementen verteilen */
-    gap: 1rem;                  /* Abstand zwischen Elementen */
+    gap: 1rem;
+}   
+
+
+.slider {
+    margin: 2rem auto;
+    border-radius: 0.5rem;
 }
 
 .sliderContainer {
@@ -22,11 +33,15 @@
 }
 
 .mainSlider {
-    width: 100%;
-    height: 100%; /* Fülle die gesamte Höhe der Spalte aus */
-    aspect-ratio: auto; /* Verhindere eine Verzerrung */
-    border-radius: 8px;
-    overflow: hidden;
+    .mainSlider {
+        width: 100%;
+        height: 100%; /* Füllt die gesamte Höhe der Spalte */
+        aspect-ratio: auto; /* Verhindert Verzerrungen */
+        border-radius: 8px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out;
+    }
+    
 }
 
 

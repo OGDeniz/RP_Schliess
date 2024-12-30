@@ -1,10 +1,7 @@
 import styles from '../styles/AboutUs.module.css';
 
 import Slider from "@/components/ui/Slider";
-import { SliderData } from "@/data/SliderData";
-import { FaArrowRight } from "react-icons/fa";
-
-import mainStyles from "@/styles/main.css";
+import { SliderData } from '@/components/jsonDb/slidesData';
 import homeStyles from "@/styles/home.module.css";
 import Link from 'next/link';
 

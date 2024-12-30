@@ -1,14 +1,14 @@
 /* navigation.module.css */
 .navigation {
-    width: 100%; /* Breite des Headers auf 100% des Bildschirms setzen */
-    display: flex; /* Flexbox für einfache Ausrichtung */
-    justify-content: space-between; /* Elemente an den Seiten platzieren */
-    align-items: center; /* Vertikale Zentrierung der Elemente */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Elemente gleichmäßig verteilen */
+    align-items: center; /* Vertikal zentrieren */
     padding: 1rem;
     background-color: var(--primary);
-    color: var(--light);
-    box-shadow: 0 1px 3px rgba(212, 232, 236, 0.15);
 }
+
 
 
 .navContainer {
@@ -17,7 +17,7 @@
 }
 
 .leftNav img {
-    margin-right: 10px;
+    margin-right: 10px;         /* Abstand zwischen Logo und Text */
 }
 
 .middleNav {
@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .middleNav h1, .middleNav h5 {
@@ -38,8 +38,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    margin-left: 100px;
+    align-items: flex-start;
     padding: 10px;
+    gap: .3rem;
+    
 }
 
 .rightNav a {
@@ -56,13 +59,15 @@
     text-decoration: none;
     font-weight: 700;
     transition: all 0.5s ease;
+    width: 100%;
 }
 
 .rightNav a:hover {
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     background-color: hsl(261, 80%, 48%);
     color: #fff;
     box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    transform: translateY(-3px);
 }
 
 
@@ -89,7 +94,15 @@
 
 @media (max-width: 768px) {
     .burgerMenu {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
     }
 
     .navContainer {

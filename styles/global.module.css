@@ -23,4 +23,23 @@
   padding: 1rem;
   background-color: var(--dark);
   color: var(--light);
+
+}
+.header {
+  width: 100%;
+  display: flex; /* Flexbox zur Ausrichtung */
+  justify-content: center; /* Inhalte zentrieren */
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Spalten untereinander anzeigen */
+  }
+
+  .leftSection, .rightSection {
+      width: 100%;
+  }
 }
