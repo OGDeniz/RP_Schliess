@@ -1,42 +1,35 @@
-import { useState } from 'react'; // React und useState importieren
-import axios from 'axios'; // Für die API-Anfrage
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function Register() {
-    // State-Variablen für die Eingaben und Nachrichten
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
-    const [address, setAddress] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [message, setMessage] = useState('');
 
-    // Funktion, die das Formular verarbeitet
     const handleRegister = async (e) => {
-        e.preventDefault(); // Verhindert das automatische Neuladen der Seite
+        e.preventDefault();
 
-        // Überprüfen, ob alle Felder ausgefüllt sind
-        if (!username || !password || !name || !address) {
+        if (!username || !password || !firstName || !lastName) {
             setMessage('Alle Felder müssen ausgefüllt werden.');
             return;
         }
 
         try {
-            // Daten an die API senden
             const response = await axios.post('/api/register', {
                 username,
                 password,
-                name,
-                address,
+                first_name: firstName,
+                last_name: lastName,
             });
 
-            // Erfolgsnachricht anzeigen
             setMessage(response.data.message);
         } catch (error) {
-            // Fehlernachricht anzeigen
-            setMessage(error.response?.data?.message || 'Registrierung fehlgeschlagen');
+            setMessage(error.response?.data?.message || 'Registrierung fehlgeschlagen.');
         }
     };
 
-    // Rückgabe (HTML für das Formular)
     return (
         <div>
             <h1>Registrierung</h1>
@@ -57,16 +50,16 @@ export default function Register() {
                 />
                 <input
                     type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Vorname"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                     required
                 />
                 <input
                     type="text"
-                    placeholder="Adresse"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    placeholder="Nachname"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     required
                 />
                 <button type="submit">Registrieren</button>
