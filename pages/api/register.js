@@ -1,5 +1,5 @@
 ﻿import { hash } from 'bcryptjs'; // Für das Hashen des Passworts
-import { query } from '../../utils/db'; // MariaDB-Verbindung und Abfragen
+import { query } from '../utils/db'; // MariaDB-Verbindung und Abfragen
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {

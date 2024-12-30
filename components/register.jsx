@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import db from '../pages/utils/db';
 
 export default function Register() {
     const [username, setUsername] = useState('');
