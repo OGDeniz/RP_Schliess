@@ -1,13 +1,6 @@
 
 /* home.module.css */
-.container {
-    display: flex;              /* Horizontale Anordnung der Spalten */
-    gap: 2rem;                  /* Abstand zwischen Spalten */
-    padding: 2rem;              /* Innenabstand des Containers */
-    max-width: 1200px;          /* Einheitliche Breite für den Container */
-    margin: 0 auto;             /* Zentrierung des Containers */
-    align-items: stretch;       /* Spalten gleich hoch machen */
-}
+
 
 .leftSection {
     flex: 1;
@@ -72,17 +65,6 @@
     color: var(--success);
 }
 
-@media (max-width: 968px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .leftSection,
-    .rightSection {
-        flex: 1;
-        width: 50%;
-    }
-}
 
 /* Additional Style Tweaks */
 .aboutUs:hover {
