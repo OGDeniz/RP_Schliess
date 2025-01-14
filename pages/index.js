@@ -1,70 +1,63 @@
 
-import homeStyles from "@/styles/home.module.css"; // Neues CSS Modul für die Startseite
-import reviews from "@/components/data/reviews"; // Import der Kundenbewertungen
-import Image from "next/image"; // Import der Image Komponente von Next.js
-import { useEffect, useState } from "react"; // Import der useEffect und useState Hooks von React
-import Slider from "react-slick"; // Import des Slider Komponente von react-slick
-import "slick-carousel/slick/slick.css"; // Import des CSS für den Slider
-import "slick-carousel/slick/slick-theme.css"; // Import des CSS für den Slider
+import homeStyles from "@/styles/home.module.css"; 
+import reviews from "@/components/data/reviews"; 
+import Image from "next/image"; 
+import { useMemo } from "react"; 
 
-// Die Startseite wird in der Datei pages/index.js definiert.
+import Slider from "@/components/ui/Slider"; 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
+
 export default function Home() {
-
-  // Die Bilder für den Slider und die Kundenbewertungen werden in Arrays definiert. 
-  const sliderImages = [
+  const sliderImages = useMemo(() => [
     {
-      url: "/bilder/img1.jpg",
+      url: "/bilder/img1.png",
       alt: "Schlüsseldienst Bild 1",
-
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
     {
-      url: "/bilder/img2.jpg",
+      url: "/bilder/img2.png",
       alt: "Schlüsseldienst Bild 2",
-
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
     {
-      url: "/bilder/img3.jpg",
+      url: "/bilder/img3.png",
       alt: "Schlüsseldienst Bild 3",
-
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
     {
-      url: "/bilder/img4.jpg",
+      url: "/bilder/img4.png",
       alt: "Schlüsseldienst Bild 4",
-
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
     {
-      url: "/bilder/img5.jpg",
+      url: "/bilder/img5.png",
       alt: "Schlüsseldienst Bild 5",
-
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
-  ];
+  ], []);
 
-
-  // Die Startseite besteht aus zwei Abschnitten: dem linken Abschnitt mit dem Slider und dem rechten Abschnitt mit Informationen über das Unternehmen und Kundenbewertungen.
-  return (<div className={homeStyles.reviewsSection}>
-    <h3>Das sagen unsere Kunden</h3>
-    <div className={homeStyles.reviewSlider}>
-      {reviews.map((review, index) => (
-          <div key={index} className={homeStyles.review}>
-            <div className={homeStyles.stars}>
-              {"★".repeat(review.rating)}
-            </div>
-            <p>{review.text}</p>
-            <div className={homeStyles.reviewFooter}>
-              <span>{review.author}</span>
-              <span>{review.date}</span>
-            </div>
-          </div>
-      ))}
+  return (
+    <div className={homeStyles.container}>
+      <Slider images={sliderImages} className={homeStyles.slider} />
+      <h2 className={homeStyles.heading}>Kundenbewertungen</h2>
+      <div className={homeStyles.reviews}>
+        {reviews.map((review) => (
+          <div key={review.name} className={homeStyles.review}>
+            <Image
+              src={review.image}
+              alt={review.name}
+              width={100}
+              height={100}
+              className={homeStyles.image}
+            />
+            <p className={homeStyles.text}>{review.text}</p>
+            <p className={homeStyles.name}>{review.name}</p>
+          </div>  
+        ))} 
+      </div>
     </div>
-  </div>
-    );
+  );
 }
-// Die Startseite wird in der Datei pages/index.js definiert.
+
 
