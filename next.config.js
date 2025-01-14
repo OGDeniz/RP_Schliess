@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
+    output: "export",
+    swcMinify: true, // Verwendet SWC für die JavaScript-Optimierung
+
+
+    // Anpassungen für die Entwicklungsumgebung
     experimental: {
+        workerThreads: false, // Deaktiviert Worker-Threads für schnellere Builds
+        cpus: 1, // Begrenzt die Anzahl der CPU-Kerne für Builds
       optimizeCss: true, // Reduziert die CSS-Verarbeitung
     },
     // Optimierungen zur Reduzierung der Serverlast

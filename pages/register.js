@@ -1,4 +1,4 @@
-import Register from '../components/register'; // Import der Komponente
+import Register from '../components/Contact'; // Import der Komponente
 
 export default function RegisterPage() {
     return (

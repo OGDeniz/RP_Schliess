@@ -58,6 +58,10 @@ export default function Navigation() {
                         Kontakt
                     </Link>
 
+                    <Link className={`${styles.link} ${styles.btn}`} href="/impressum">
+                        Impressum
+                    </Link>
+
                     <div className='burgerMenu' onClick={toggleMenu}>
                     <span className={styles.burger}></span>
                     <span className={styles.burger}></span>
