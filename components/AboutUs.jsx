@@ -1,7 +1,7 @@
 import styles from '../styles/aboutus.module.css';
 
 import Slider from "@/components/ui/Slider";
-import { SliderData } from '@/components/jsonDb/slidesData';
+import { SliderData } from '@/components/data/slidesData';
 import homeStyles from "@/styles/home.module.css";
 import Link from 'next/link';
 

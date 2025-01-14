@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"; // Import von useEffect hinzugefügt
-import { slidesData } from "../jsonDb/slidesData";
+import { slidesData } from "@/components/data/slidesData";
 import "../../styles/textSlider.module.css";
 
 const TextSlider = () => {

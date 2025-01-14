@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useRouter } from 'next/router';
-import jsonDb from "../../jsonDb/produkte";
+import jsonDb from "@/components/data/produkte";
 import Image from "next/image";
 import styles from "@/styles/cards.module.css";
 import modalStyles from "@/styles/modal.module.css";

@@ -2,7 +2,6 @@
 const nextConfig = {
 
     output: "export",
-    swcMinify: true, // Verwendet SWC für die JavaScript-Optimierung
 
 
     // Anpassungen für die Entwicklungsumgebung

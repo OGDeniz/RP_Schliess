@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,6 +10,9 @@ import HotButton from '../ui/HotButton';
 export default function Navigation() {
         const [menuOpen, setMenuOpen] = useState(false);
 
+        useEffect(() => {
+            setMenuOpen(false); // Initialisierung des Menüs
+        }, []);
 
         const toggleMenu = () => setMenuOpen(!menuOpen);
         
