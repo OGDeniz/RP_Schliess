@@ -1,40 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+# RP_Schliess ![RP_Schliess](https://img.shields.io/badge/Next.js-blue)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+RP_Schliess ist ein Projekt, das mit Next.js erstellt wurde. Es dient als Grundlage für die Entwicklung einer Anwendung mit React und bietet eine strukturierte Umgebung für die Implementierung von Komponenten und Funktionen.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Next.js**: Serverseitiges Rendering und statische Seitengenerierung.
+- **Komponentenbasiert**: Strukturierte Organisation von React-Komponenten.
+- **API-Routen**: Integrierte API-Routen für serverseitige Funktionen.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🛠️ Technologie-Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Frontend:
+- **React.js mit Next.js-Framework**: Moderne, komponentenbasierte Architektur.
+- **CSS-Module**: Schnelles und responsives Styling.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Entwicklungstools:
+- **ESLint**: Linting.
+- **Visual Studio Code**: Entwicklung.
 
-## Learn More
+## 📦 Installation
 
-To learn more about Next.js, take a look at the following resources:
+### Voraussetzungen
+- **Node.js** und **npm** (für das Frontend)
+- **.NET SDK** (für das Backend)
+- **SQL Server** (für die Datenbank)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Frontend installieren
+1. Repository klonen:
+   ```bash
+   git clone https://github.com/OGDeniz/RP_Schliess.git
+   cd RP_Schliess
+   ```
+2. Abhängigkeiten installieren:
+   ```bash
+   npm install
+   ```
+3. Entwicklungsserver starten:
+   ```bash
+   npm run dev
+   ```
+   Öffne [http://localhost:3000](http://localhost:3000) in deinem Browser, um die Anwendung zu sehen.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Projektstruktur
 
-## Deploy on Vercel
+- **components/**: Enthält wiederverwendbare React-Komponenten.
+- **pages/**: Beinhaltet die Seiten der Anwendung; jede Datei repräsentiert eine Route.
+- **public/**: Statische Dateien wie Bilder und Icons.
+- **styles/**: CSS-Dateien für globales und spezifisches Styling.
+- **lib/**: Hilfsfunktionen und Bibliotheken.
+- **other_things/**: Weitere Ressourcen und Dateien.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗂️ Datenstruktur
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Die spezifische Datenstruktur des Projekts ist nicht detailliert dokumentiert. Basierend auf der Standardstruktur von Next.js können jedoch folgende Annahmen getroffen werden:
+- **Seiten (pages/)**: Jede Datei entspricht einer Route und kann sowohl UI-Komponenten als auch Datenabruflogik enthalten.
+- **Komponenten (components/)**: Wiederverwendbare UI-Elemente, die in verschiedenen Seiten integriert werden.
+- **Statische Dateien (public/)**: Ressourcen, die direkt vom Server geliefert werden, ohne zusätzliche Verarbeitung.
+
+## 📄 Nutzung
+
+1. **Entwicklung**: Beginne mit der Bearbeitung der Dateien im `pages/`-Verzeichnis, um neue Seiten oder API-Routen hinzuzufügen.
+2. **Styling**: Verwende die Dateien im `styles/`-Verzeichnis, um globale oder modulare Styles zu definieren.
+3. **Komponenten**: Erstelle neue Komponenten im `components/`-Verzeichnis und importiere sie in deine Seiten oder andere Komponenten.
+
+## 👥 Mitwirkende
+
+- Deniz Yavuzkaya – [GitHub-Profil](https://github.com/OGDeniz)
+
+## 📝 Lizenz
+
+Dieses Projekt steht unter der MIT-Lizenz. Weitere Details findest du in der Datei LICENSE.
+
+---
+
