@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"; // Import von useEffect hinzugefügt
 import { slidesData } from "@/components/data/slidesData";
-import "../../styles/textSlider.module.css";
+import styles from "@/styles/TextSlider.module.css";
 
 const TextSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -3,6 +3,7 @@ import Navigation from "@/components/navigation/Navigation";
 import Fusszeile from "@/components/navigation/Fusszeile";
 import Head from "next/head";
 
+
 export default function Layout({children}) {
     return (
         <div>

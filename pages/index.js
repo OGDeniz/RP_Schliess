@@ -1,8 +1,8 @@
 
-import homeStyles from "@/styles/home.module.css"; 
 import reviews from "@/components/data/reviews"; 
 import Image from "next/image"; 
 import { useMemo } from "react"; 
+  import homeStyles from "../styles/home.module.css";
 
 import Slider from "@/components/ui/Slider"; 
 import "slick-carousel/slick/slick.css"; 
@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
   const sliderImages = useMemo(() => [
     {
-      url: "/bilder/img1.png",
+      url: "/bilder/img1.jpg",
       alt: "Schlüsseldienst Bild 1",
       sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
     },
