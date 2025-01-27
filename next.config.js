@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Für statische Seiten
 
   // Anpassungen für die Entwicklungsumgebung
   experimental: {
